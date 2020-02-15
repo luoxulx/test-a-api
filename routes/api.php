@@ -11,17 +11,18 @@
 |
 */
 // webhook open api
-Route::post('/14k/pull', 'WebhookController@pull'); //webhooks
-Route::post('/14k/vue', 'WebhookController@buildVueCil'); //webhooks
+Route::post('/14k/pull', 'WebhookController@pull'); // webhooks
+Route::post('/14k/vue', 'WebhookController@buildVueCil'); // webhooks
 
 // Vultr 接口: 仅指定 IP 可调用
 Route::group(['namespace'=>'Api\Vultr', 'prefix'=>'vultr'], function () {
 
-    Route::get('account/info', 'VultrController@accountInfo');
-    Route::get('app/list', 'VultrController@applications');
-    Route::get('auth/info', 'VultrController@authInfo');
-    Route::get('backup/list', 'VultrController@backupList');
-    Route::get('baremetal/bandwidth', 'VultrController@bandwidth');
-    Route::get('baremetal/get_app_info', 'VultrController@getAppInfo');
-    Route::get('baremetal/list', 'VultrController@serverList');
+    // 暂时关闭 open 接口
+//    Route::get('account/info', 'VultrController@accountInfo');
+//    Route::get('app/list', 'VultrController@applications');
+//    Route::get('auth/info', 'VultrController@authInfo');
+//    Route::get('backup/list', 'VultrController@backupList');
+//    Route::get('baremetal/bandwidth', 'VultrController@bandwidth');
+//    Route::get('baremetal/get_app_info', 'VultrController@getAppInfo');
+//    Route::get('baremetal/list', 'VultrController@serverList');
 });
