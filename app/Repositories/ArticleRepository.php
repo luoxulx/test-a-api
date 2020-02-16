@@ -62,7 +62,7 @@ class ArticleRepository extends BaseRepository
             if (! isset($input['tags'])) {
                 $input['tags'] = [];
             }
-            // TODO 默认值 en
+            // TODO 英文表的默认值
             if (!isset($input['en']['title']) || empty($input['en']['title'])) {
                 $input['en']['title'] = $input['title'];
             }
