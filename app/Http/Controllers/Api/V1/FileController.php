@@ -46,6 +46,7 @@ class FileController extends BaseController
             $key .= '/'.date('Y').'/'.date('m').'/'.$newName;
         }
 
+        // 七牛云 web 直传地址（北美空间）
         $data = [
             'token' => $this->qiniu->uploadToken($key),
             'key' => $key,
