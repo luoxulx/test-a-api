@@ -51,7 +51,7 @@
       </div>
     </div>
 
-    <el-dialog :title="replyToWho" :visible.sync="replyDialogVisible" width="35%">
+    <el-dialog :title="replyToWho" :visible.sync="replyDialogVisible" width="45%">
       <div class="card-body text-info" style="padding: 0.5rem;">
         <el-form ref="replyFormRef" :model="replyForm" :rules="replyRule" size="mini">
           <el-form-item prop="content" label="">
