@@ -51,8 +51,10 @@ class CommentController extends BaseController
     {
         $param = request()->all();
         $resource = $this->comment->create($param);
-
-        $this->dispatch(new SendNewCommentAlertEmail($resource));
+        // 本地调试环境时，不发送邮件通知
+        if (config('app.debug') === false) {
+            $this->dispatch(new SendNewCommentAlertEmail($resource));
+        }
 
         return $this->response->withCreated($resource, new CommentTransformer());
     }
