@@ -13,6 +13,7 @@ namespace App\Http\Controllers\Api\V1;
 
 use App\Repositories\ArticleRepository;
 use App\Transformers\ArticleTransformer;
+use Illuminate\Http\Request;
 
 class ArticleController extends BaseController
 {
@@ -26,9 +27,9 @@ class ArticleController extends BaseController
         $this->article = $articleRepository;
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        return $this->response->collection($this->article->paginate(), new ArticleTransformer());
+        return $this->response->collection($this->article->pageWithRequest($request), new ArticleTransformer());
     }
 
     public function show(int $id)

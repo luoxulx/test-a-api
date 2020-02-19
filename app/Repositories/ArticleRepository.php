@@ -26,6 +26,33 @@ class ArticleRepository extends BaseRepository
         return $this->model->orderBy('created_at', 'desc')->select(['id','category_id','user_id','is_draft','title','source','description','slug','updated_at'])->paginate($perPage);
     }
 
+    public function pageWithRequest($request)
+    {
+        $perPage = $request->get('per_page', 10);
+        $keyword = $request->get('keyword', null);
+        $categoryId = $request->get('category_id', null);
+        $sortField = $request->get('keyword', 'created_at');
+        $sortWay = $request->get('keyword', 'desc');
+
+        $articles = $this->model
+        ->select(['id','category_id','user_id','is_draft','title','source','description','slug','updated_at'])
+        ->with('category')
+            // 此处2个 category 指定关联的 model
+        ->whereHas('category', function ($query) use ($categoryId) {
+            if ($categoryId) {
+                // 此处的categories指关联的 cate 表
+                $query->where('categories.id', $categoryId);
+            }
+        })
+        ->when($keyword, function ($query) use ($keyword) {
+            $query->where('title', 'like', "%{$keyword}%");
+        })
+        ->orderBy($sortField, $sortWay)
+        ->paginate($perPage);
+
+        return $articles;
+    }
+
     public function getBySlug($slug)
     {
         $condition = [
