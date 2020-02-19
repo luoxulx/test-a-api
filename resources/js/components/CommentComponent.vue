@@ -4,7 +4,7 @@
     <div class="row justify-content-center">
       <div class="col-md-12">
         <div class="card border-info mb-3">
-          <div class="card-header">内容来源&nbsp;<a href="https://linux.cn/" target="_blank">Linux 中国</a>，如有不同观点，请楼下排队吐槽 😁</div>
+          <div class="card-header">内容来源&nbsp;<a href="https://linux.cn/" target="_blank">Linux 中国</a>，如有不同观点，请文明吐槽</div>
           <div class="card-body text-info" style="padding: 0.5rem;">
             <el-form ref="commentFormRef" :model="commentForm" :rules="commentRule" size="mini">
               <el-form-item prop="content" label="">
@@ -30,7 +30,7 @@
           <div class="card-header"><i class="el-icon-map-location m-r-3"></i>{{ item.nickname || item.origin }} &nbsp;&nbsp;<small><i class="el-icon-time m-r-3"></i>{{ item.created_at }}</small></div>
           <div :class="pTextArray[Math.floor(Math.random() * pTextArray.length)]">
             <p class="card-text">{{ item.content }}</p>
-            <el-button type="default" size="mini" @click="openReplyDialogVisible(item)">回复</el-button>
+            <el-button type="primary" size="mini" @click="openReplyDialogVisible(item)">回复</el-button>
 
             <div class="comment-children">
               <ul v-if="item.replies" class="list-group list-group-flush">
@@ -73,6 +73,32 @@
     nickname: '',
     content: ''
   }
+  // 按需引入，只加载需要的扩展
+  // TODO 2020-02-19:按需引入时会有报错,先全部加载
+  // import {
+  //     Message,
+  //     Icon,
+  //     Dialog,
+  //     Loading,
+  //     Button,
+  //     Row,
+  //     Col,
+  //     Form,
+  //     FormItem,
+  //     Input
+  // } from 'element-ui';
+  // import 'element-ui/lib/theme-chalk/index.css';
+  // window.Vue.prototype.$ELEMENT = { size: 'small', zIndex: 3000 };
+  // window.Vue.use(Message);
+  // window.Vue.use(Dialog);
+  // window.Vue.use(Loading);
+  // window.Vue.use(Button);
+  // window.Vue.use(Row);
+  // window.Vue.use(Col);
+  // window.Vue.use(Form);
+  // window.Vue.use(FormItem);
+  // window.Vue.use(Input);
+  // window.Vue.use(Icon);
   export default {
     name: 'Comment',
     props: {
@@ -186,7 +212,8 @@
                   }
                   return true
               }).catch(error => {
-                  this.$message.error(error.message)
+                  this.$message.error(error.message || 'Client Error')
+                  return false
               })
           }
 
@@ -225,6 +252,7 @@
               return true
             }).catch(error => {
               this.$message.error(error.message)
+                return false
             })
           }
           this.submitLoading = false

@@ -1,8 +1,8 @@
 <footer class="pt-4 my-md-5 pt-md-5 border-top container">
     <div class="row">
         <div class="col-12 col-md">
-            <p><small class="d-block mb-3 text-muted">浙ICP备17055140号-1</small></p>
             <p><small class="d-block mb-3 text-muted margin-r-15">内容来源&nbsp;&nbsp;<a href="https://linux.cn/" class="btn-outline-secondary" target="_blank">Linux 中国◆开源社区</a></small></p>
+            <p><small class="d-block mb-3 text-muted"><a target="_blank" href="http://www.beian.miit.gov.cn/">浙ICP备17055140号-1</a></small></p>
             <p>&copy; 2014-{{ date('Y') }} 14k,&nbsp;&nbsp;&nbsp;P&nbsp;&nbsp;&nbsp;K &middot; <a href="javascript:void(0);" data-toggle="modal" data-target="#antediluvianPrivacy">Privacy</a> &middot; <a href="javascript:void(0);" data-toggle="modal" data-target="#antediluvianPrivacy">Terms</a></p>
         </div>
     </div>

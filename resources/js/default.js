@@ -1,3 +1,4 @@
+// 此文件仅用于首页，请按需加载
 
 /**
  * First we will load all of this project's JavaScript dependencies which
