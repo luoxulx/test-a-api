@@ -26,6 +26,7 @@ class ArticleRepository extends BaseRepository
         return $this->model->orderBy('created_at', 'desc')->select(['id','category_id','user_id','is_draft','title','source','description','slug','updated_at'])->paginate($perPage);
     }
 
+    // 供后台使用，囊括分页、搜索、排序等
     public function pageWithRequest($request)
     {
         $perPage = $request->get('per_page', 10);
