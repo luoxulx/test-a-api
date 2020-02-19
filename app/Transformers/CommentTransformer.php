@@ -18,7 +18,8 @@ class CommentTransformer extends TransformerAbstract
     {
         $data = $comment->attributesToArray();
         $data['article_title'] = $comment->article()->value('title');
-        $data['replies'] = $comment->replies()->orderBy('created_at', 'asc')->select(['id','nickname','content','origin','created_at'])->get();
+        // 网友回复按照回复时间倒序排序
+        $data['replies'] = $comment->replies()->orderBy('created_at', 'desc')->select(['id','nickname','content','origin','created_at'])->get();
 
         return $data;
     }
