@@ -148,13 +148,13 @@
                         <p>Even if my dreams are lonely, I will not forget to cheer myself up. At least, LongKui will accompany me to the end! &nbsp;&nbsp;LNMPA. </p>
                         <dl class="ts-column-count-2">
                             <dt>Name:</dt>
-                            <dd>Frankenstein 14k</dd>
-                            <dt>Phone:</dt>
+                            <dd> 14k</dd>
+                            <dt><abbr title="这是乱写的😁">Phone</abbr>:</dt>
                             <dd>0081-9012-345-678</dd>
-                            <dt>Email:</dt>
+                            <dt><abbr title="这也是个假的...">Email</abbr>:</dt>
                             <dd>dr_14k@yeah.net</dd>
                             <dt>Twitter:</dt>
-                            <dd>14k</dd>
+                            <dd>Frankenstein.14k</dd>
                         </dl>
                         <hr class="ts-hr-light mb-5">
                         <a href="#contact" class="ts-btn-effect mr-2">
@@ -188,7 +188,7 @@
                 <h4>Every Day is a New Challenge</h4>
                 <div class="row">
                     <div class="col-md-6">
-                        <p>One day, I will become a legitimate American. </p>
+                        <p>One day, I will become a citizen of the United States. </p>
                         <a href="#contact" class="btn btn-outline-light mb-5">Contact Me</a>
                     </div>
                     <div class="col-md-6">
@@ -219,14 +219,14 @@
                     <div class="row">
                         <div class="col-sm-6 col-md-3">
                             <div class="ts-promo-number text-center">
-                                <figure class="odometer" data-odometer-final="55">0</figure>
+                                <figure class="odometer" data-odometer-final="65">0</figure>
                                 <h5>Repositories</h5>
                             </div>
                         </div>
 
                         <div class="col-sm-6 col-md-3">
                             <div class="ts-promo-number text-center">
-                                <figure class="odometer" data-odometer-final="68">0</figure>
+                                <figure class="odometer" data-odometer-final="168">0</figure>
                                 <h5>Issues</h5>
                             </div>
                         </div>
@@ -240,7 +240,7 @@
 
                         <div class="col-sm-6 col-md-3">
                             <div class="ts-promo-number text-center">
-                                <figure class="odometer" data-odometer-final="5">0</figure>
+                                <figure class="odometer" data-odometer-final="6">0</figure>
                                 <h5>Followers</h5>
                             </div>
                         </div>
@@ -250,7 +250,7 @@
         <!-- photos -->
         <section class="ts-block pb-5" id="portfolio">
             <div class="container">
-                <div class="ts-title"><h2>Photos</h2></div>
+                <div class="ts-title"><h2>Bing Images</h2></div>
                 <div class="card-columns ts-gallery ts-column-count-4">
                     @forelse($allPics as $val)
                         <a href="{{ $val['real_url'] }}" class="card ts-gallery__item popup-image" data-animate="ts-fadeInUp">
@@ -270,7 +270,6 @@
                         <img src="/owl/pic/img-work-01.png" class="card-img" alt="empty image">
                     </a>
                     @endforelse
-
                 </div>
             </div>
         </section>

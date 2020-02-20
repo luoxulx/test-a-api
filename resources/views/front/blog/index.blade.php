@@ -10,7 +10,7 @@
     <main role="main" class="container">
         <div class="row">
             <div class="col-md-9">
-                <h3 class="pb-3 mb-4 font-italic border-bottom">Antediluvian</h3>
+                <h3 class="pb-3 mb-4 font-italic border-bottom"><abbr title="Antediluvian Slaughter">Frankenstein</abbr> . 14k</h3>
                 @forelse($articles as $item)
                 <div class="blog-post">
                     <h3 class="blog-post-title"><a href="{{ route('blog.show', ['slug'=>$item->slug]) }}">{{ $item->title }}</a></h3>

@@ -7,16 +7,18 @@
                     <img src="/owl/pic/icon-pin.png" class="mb-4" alt="icon-pin">
                     <h5>Address</h5>
                     <div class="ts-opacity__50">
-                        <figure class="mb-0">In Japan</figure>
-                        <figure>The village office of Ogawa, OgawaShirakawa-ku</figure>
+                        <address>
+                            <figure class="mb-0"><strong>Nakano-city,Japan</strong></figure>
+                            <figure><em>1254-1 Oaza mituwa, Nakano-city 日本〒380-0911</em></figure>
+                        </address>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-3 mb-4" data-animate="ts-fadeInUp" data-delay=".1s">
                     <img src="/owl/pic/icon-phone-02.png" class="mb-4" alt="icon-phone-02">
                     <h5>Phone</h5>
                     <div class="ts-opacity__50">
-                        <figure class="mb-0">0081-9012345678</figure>
-                        <figure>+1 421-214-4213</figure>
+                        <figure class="mb-0">0081-901****678</figure>
+                        <figure>+1 421-***-4213</figure>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-3 mb-4" data-animate="ts-fadeInUp" data-delay=".2s">
@@ -24,20 +26,20 @@
                     <h5>Email</h5>
                     <div class="ts-opacity__50">
                         <figure class="mb-0">dr_14k@yeah.net</figure>
-                        <figure>longkuilx@gmail.com</figure>
+                        <figure>lon*****x@gmail.com</figure>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-3 mb-4" data-animate="ts-fadeInUp" data-delay=".3s">
                     <img src="/owl/pic/icon-talk-bubble.png" class="mb-4" alt="icon-talk-bubble"><h5>Facebook Chat</h5>
                     <div class="ts-opacity__50">
-                        <figure>Frankenstein</figure>
+                        <figure><em>Frankenstein.14k</em></figure>
                     </div>
                 </div>
             </div>
             <div class="pt-5">
                 <div class="row">
                     <div class="col-md-4">
-                        <h3>Let’s Connect</h3>
+                        <h3>Connect</h3>
                         <div class="ts-column-count-sm-2">
                             <a href="https://github.com/luoxulx" target="_blank" class="mb-3 d-flex text-white ts-align__vertical" target="_blank">
                                 <span class="ts-circle__xs border border-white ts-border-light mr-4"><i class="fab fa-github"></i></span>
