@@ -1,18 +1,3 @@
-dasdsa
-##### 命令记录
-- 定时任务：crontab -e
-- ~~token 一天有效~~
-- php artisan key:generate
-- JWT secret：php artisan jwt:secret
-- php artisan make:migration create_departments_table --create=users
-- php artisan migrate --force
-- php artisan migrate:rollback
-- php artisan db:seed
-- php artisan config:clear
-- php artisan config:cache
----
-
-
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
