@@ -1,4 +1,5 @@
 ##### 命令记录
+
 - 定时任务：crontab -e
 - ~~token 一天有效~~
 - php artisan key:generate
@@ -10,3 +11,4 @@
 - php artisan config:clear
 - php artisan config:cache
 ---
+内置命令
