@@ -22,7 +22,7 @@ class BaiduIpLocation
      */
     public function getIpLocation($ip = '')
     {
-
+        // todo 需要优化
         if (preg_match('%^127\.|10\.|192\.168|172\.(1[6-9]|2|3[01])%', $ip)) {
             return 'LAN';
         }
