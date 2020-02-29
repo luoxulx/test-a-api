@@ -13,7 +13,7 @@
     <title>@yield('meta_title', config('app.name'))</title>
 </head>
 <body>
-<div id="b" class="container-fluid">
+<div id="blogpage" class="container-fluid">
     @yield('main')
 </div>
 <button id="totop" title="Go to top" style="display: block;"><i class="el-icon-top"></i></button>

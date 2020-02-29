@@ -13,7 +13,7 @@
     <title>@yield('metaTitle', 'Frankenstein 14k - Personal')</title>
 </head>
 <body data-spy="scroll" data-target=".navbar" class="has-loading-screen">
-    <div id="front">
+    <div id="home">
         @yield('main')
     </div>
 <!-- script -->

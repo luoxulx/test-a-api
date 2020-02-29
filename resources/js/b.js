@@ -8,5 +8,5 @@ Vue.use(Element, { size: 'small', zIndex: 3000 });
 
 Vue.component('comment-component', require('./components/CommentComponent').default);
 const b = new Vue({
-  el: '#b',
+  el: '#blogpage',
 });
