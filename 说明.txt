@@ -11,4 +11,6 @@
 - php artisan config:clear
 - php artisan config:cache
 ---
-内置命令
+composer
+国内镜像:composer config -g repo.packagist composer https://packagist.phpcomposer.com
+撤销:composer config -g --unset repos.packagist
