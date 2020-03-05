@@ -14,7 +14,6 @@ class HomeController extends FrontController
 
     public function index(LinkRepository $linkRepository)
     {
-
         $bingPic = cache('home_bing_pic_8_num');
         $allPics = cache('all_info_of_bing_pic');
         $links = cache('home_foot_links');
@@ -52,6 +51,7 @@ class HomeController extends FrontController
             cache(['home_bing_pic_8_num'=>$bingPic], 1440);
             unset($response);
         }
+
         shuffle($bingPic);
 
         return view('front.home.index', ['bingPic'=>$bingPic, 'allPics'=>$allPics, 'links'=>$links]);

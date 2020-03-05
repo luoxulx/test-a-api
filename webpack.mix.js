@@ -12,7 +12,7 @@ const mix = require('laravel-mix');
  */
 mix.webpackConfig({
   plugins: []
-}).js('resources/js/default.js', 'public/js')
-  .sass('resources/sass/default.scss', 'public/css')
-  .js('resources/js/b.js', 'public/js')
-  .sass('resources/sass/b.scss', 'public/css').version();
+}).js('resources/js/home.js', 'public/js')
+  .sass('resources/sass/home.scss', 'public/css')
+  .js('resources/js/blog.js', 'public/js')
+  .sass('resources/sass/blog.scss', 'public/css').version();

@@ -7,6 +7,6 @@ import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(Element, { size: 'small', zIndex: 3000 });
 
 Vue.component('comment-component', require('./components/CommentComponent').default);
-const b = new Vue({
+const blog = new Vue({
   el: '#blogpage',
 });

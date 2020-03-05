@@ -32,6 +32,9 @@
 </template>
 
 <script>
+  import { Message } from 'element-ui'
+  import 'element-ui/lib/theme-chalk/index.css'
+  Vue.component(Message.name, Message);
   export default {
     name: "Feedback",
     components: {},
@@ -41,9 +44,7 @@
           nickname: '',
           email: '',
           content: '',
-        },
-        verifyCodeBase64: '',
-        verifyCodeKey: ''
+        }
       }
     },
     mounted() {
@@ -51,34 +52,45 @@
     },
     methods: {
       submitGuestFeedback() {
-        if (!this.feedbackForm.nickname) {
-          return false
-        }
-        if (!this.feedbackForm.email) {
-          return false
-        }
-        if (!this.feedbackForm.content) {
-          alert('content null')
-          return false
-        }
-
-        window.axios.post('/api/v1/open/feedback', this.feedbackForm).then((response) => {
-          if (response.status === true) {
-            this.feedbackForm.nickname = ''
-            this.feedbackForm.email = ''
-            this.feedbackForm.content = ''
-            alert('successful')
-            return true
-          } else {
-            alert(response.message || response.debug)
-            return false
+          if (this.verifyFormField() !== true) {
+              return false
           }
-        }).catch((error) => {
-          alert('Client error')
-          console.error(error)
-          return false
-        })
-      }
+          window.axios.post('/api/v1/open/feedback', this.feedbackForm).then((response) => {
+              if (response.status === true) {
+                  this.feedbackForm.nickname = ''
+                  this.feedbackForm.email = ''
+                  this.feedbackForm.content = ''
+                  Message.success('successful')
+                  return true
+              } else {
+                  Message.error(response.message || response.debug)
+                  return false
+              }
+          }).catch((error) => {
+              Message.error('Client error')
+              console.error(error)
+              return false
+          })
+      },
+      verifyFormField() {
+            if (this.feedbackForm.nickname.length === 0) {
+                Message.error('Nickname is required. ')
+                return false
+            }
+            if (this.feedbackForm.email.length === 0) {
+                Message.error('Email is required. ')
+                return false
+            }
+            if (this.feedbackForm.content.length === 0) {
+                Message.error('Content is required. ')
+                return false
+            }
+            if (this.feedbackForm.content.length > 225) {
+                Message.error('Content is more than 225. ')
+                return false
+            }
+            return true
+        }
     }
   }
 </script>

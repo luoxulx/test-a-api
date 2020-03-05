@@ -11,6 +11,7 @@ if (!function_exists('curl')) {
     {
         $client = new \GuzzleHttp\Client([
             'timeout' => 20,
+            'verify' => config('app.debug') ? false : true, // 本地debug时，请求https关闭证书认证
             'allow_redirects' => false
         ]);
 
@@ -38,10 +39,9 @@ if (!function_exists('curl')) {
                 default:
                     return ['code'=>-1,'message'=>'Method Not Allowed'];
             }
-
             return json_decode($response->getBody()->getContents(), true);
         } catch (Exception $exception) {
-            throw new \Symfony\Component\HttpKernel\Exception\HttpException($exception->getCode(), $exception->getMessage());
+            throw new Exception($exception->getMessage(), $exception->getCode());
         }
     }
 }

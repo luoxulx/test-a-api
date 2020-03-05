@@ -32,7 +32,6 @@ require('./olr/custom.js');
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('feedback-component', require('./components/FeedbackComponent.vue').default);
-Vue.component('banner-component', require('./components/HomeBanner.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
