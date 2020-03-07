@@ -29,6 +29,7 @@ class HomeController extends FrontController
             $param['format'] = 'js';
             $param['idx'] = 0;
 
+            // 国内地址
             $defaultUrl = 'https://cn.bing.com/th?id=OHR.FireIce_ZH-CN2924097132_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp';
 
             $uri = config('app.14k.bing_uri');
