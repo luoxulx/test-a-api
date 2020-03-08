@@ -162,7 +162,7 @@ class ArticleRepository extends BaseRepository
 
     public function pageList($month = null)
     {
-        $perPage = request()->get('per_page', 10);
+        $perPage = request()->get('per_page', 9);
 
         $condition = [
             'is_draft' => 0

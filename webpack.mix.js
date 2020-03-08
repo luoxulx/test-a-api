@@ -15,4 +15,6 @@ mix.webpackConfig({
 }).js('resources/js/home.js', 'public/js')
   .sass('resources/sass/home.scss', 'public/css')
   .js('resources/js/blog.js', 'public/js')
-  .sass('resources/sass/blog.scss', 'public/css').version();
+  .sass('resources/sass/blog.scss', 'public/css')
+  .js('resources/js/blog2.js', 'public/js')
+  .sass('resources/sass/blog2.scss', 'public/css').version();
