@@ -46,11 +46,13 @@ class FileController extends BaseController
             $key .= '/'.date('Y').'/'.date('m').'/'.$newName;
         }
 
-        // 七牛云 web 直传地址（北美空间）
+        // 七牛云 web 直传地址（北美空间,华东空间，不同区域地址也不同）
+        // 北美：https://upload-na0.qiniup.com
+        // 华东：https://upload.qiniup.com
         $data = [
             'token' => $this->qiniu->uploadToken($key),
             'key' => $key,
-            'uri' => 'https://upload-na0.qiniup.com'
+            'uri' => 'https://upload.qiniup.com'
         ];
         return $this->response->json(['data' => $data]);
     }
