@@ -22,8 +22,6 @@ Route::group(['middleware' => 'validate.input', 'prefix' => 'v1'], function () {
     Route::post('open/comment', 'CommentController@store')->name('api.open.comment.store');
     Route::post('open/reply', 'ReplyController@store')->name('api.open.reply.store');
 
-    Route::get('file/upload/token', 'FileController@uploadToken')->name('api.file.uploadtoken');
-
     /** ---------- open api end---------- */
 
     Route::group(['middleware' => 'auth:api'], function () {
@@ -141,6 +139,10 @@ Route::group(['middleware' => 'validate.input', 'prefix' => 'v1'], function () {
         /* ---system logs-end--- */
 
         /* ---file upload-start--- */
+        // 获取客户端图片web直传的token
+        Route::get('image/upload/token', 'FileController@uploadImageToken')->name('api.image.uploadtoken');
+        Route::get('file/upload/token', 'FileController@uploadFileToken')->name('api.file.uploadtoken');
+        // 文件管理相关路由
         Route::get('file/list', 'FileController@index')->name('api.file.index');
         Route::post('file/info/write', 'FileController@saveFileInfo')->name('api.file.writeinfo');
         /* ---file upload-end--- */

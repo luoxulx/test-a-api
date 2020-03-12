@@ -15,6 +15,8 @@ use App\Transformers\FileTransformer;
 class FileController extends BaseController
 {
 
+    // 1 图片
+    // 2 文件
     protected $file;
     protected $qiniu;
 
@@ -35,8 +37,32 @@ class FileController extends BaseController
      *  name(required): origin_name
      * @return \Illuminate\Http\JsonResponse
      */
-    public function uploadToken()
+    public function uploadImageToken()
     {
+        // key用作客户端父级目录名
+        $key = request()->get('key');
+        $originName = request()->get('original_name');
+        $ext = substr(strrchr($originName,'.'),1);
+        $newName = md5(uniqid('14k', true).time().$originName).'.'.$ext;
+
+        if ($key !== null) {
+            $key .= '/'.date('Y').'/'.date('m').'/'.$newName;
+        }
+
+        // 七牛云 web 直传地址（北美空间,华东空间，不同区域地址也不同）
+        // 北美：https://upload-na0.qiniup.com
+        // 华东：https://upload.qiniup.com
+        $data = [
+            'token' => $this->qiniu->uploadToken($key),
+            'key' => $key,
+            'uri' => 'https://upload.qiniup.com'
+        ];
+        return $this->response->json(['data' => $data]);
+    }
+
+    public function uploadFileToken()
+    {
+        // key用作客户端父级目录名
         $key = request()->get('key');
         $originName = request()->get('original_name');
         $ext = substr(strrchr($originName,'.'),1);

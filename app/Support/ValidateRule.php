@@ -18,7 +18,11 @@ class ValidateRule
                 'n' => 'integer|min:1|max:8',
                 'idx' => 'integer|min:-1|max:16'
             ],
-            'file.uploadToken' => [
+            'file.uploadImageToken' => [
+                'key' => 'required|string',
+                'original_name' => 'required|string'
+            ],
+            'file.uploadFileToken' => [
                 'key' => 'required|string',
                 'original_name' => 'required|string'
             ],
