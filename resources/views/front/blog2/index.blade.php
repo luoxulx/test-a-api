@@ -1,4 +1,4 @@
-@extends('front.blog.layout')
+@extends('front.blog2.layout')
 @section('main')
     <header>
         <div class="collapse bg-dark" id="navbarHeader">
@@ -45,9 +45,8 @@
             </div>
         </section>
 
-        <div class="album py-5 bg-light">
+        <div class="bg-light">
             <div class="container">
-
                 <div class="row">
                     @forelse($articles as $item)
                         <div class="col-md-4">

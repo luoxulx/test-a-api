@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{{ mix('css/blog2.css') }}">
 </head>
 <body>
-<div id="blogpage" class="container-fluid">
+<div id="blogpage">
     @yield('main')
 </div>
 <button id="totop" title="Go to top" style="display: block;"><i class="el-icon-top"></i></button>

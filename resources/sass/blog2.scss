@@ -3,6 +3,11 @@
 
 // lx-new
 /* stylelint-disable selector-list-comma-newline-after */
+.container-fluid {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
 .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
