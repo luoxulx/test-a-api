@@ -6,7 +6,7 @@
             <div class="navbar-nav d-block d-lg-flex ml-auto text-right">
                 <a class="nav-item nav-link active ts-scroll" href="#page-top">Home <span class="sr-only">(current)</span></a>
                 <a class="nav-item nav-link ts-scroll" href="/blog">Blog</a>
-                <a class="nav-item nav-link ts-scroll" href="#my-services">Services</a>
+                <a class="nav-item nav-link ts-scroll" href="#my-hobbies">Hobbies</a>
                 <a class="nav-item nav-link ts-scroll" href="#about-me"> Me</a>
                 <a class="nav-item nav-link ts-scroll" href="#my-skills">Skills</a>
                 <a class="nav-item nav-link ts-scroll" href="#portfolio">Pictures</a>

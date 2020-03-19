@@ -27,7 +27,7 @@
                     </h2>
                 </div>
             </div>
-            <a href="#my-services" class="ts-btn-effect position-absolute ts-bottom__0 ts-left__0 ts-scroll ml-3 mb-3"><span class="ts-visible ts-circle__sm rounded-0 ts-bg-primary"><i class="fa fa-arrow-down text-white"></i></span><span class="ts-hidden ts-circle__sm rounded-0"><i class="fa fa-arrow-down text-white"></i></span></a>
+            <a href="#my-hobbies" class="ts-btn-effect position-absolute ts-bottom__0 ts-left__0 ts-scroll ml-3 mb-3"><span class="ts-visible ts-circle__sm rounded-0 ts-bg-primary"><i class="fa fa-arrow-down text-white"></i></span><span class="ts-hidden ts-circle__sm rounded-0"><i class="fa fa-arrow-down text-white"></i></span></a>
         </div>
         <div class="ts-background">
             <div class="ts-background-image" data-bg-image="{{ $bingPic[0] }}"></div>
@@ -35,9 +35,9 @@
     </div>
 
         <main id="ts-content">
-        <section id="my-services" class="ts-block ts-xs-text-center pb-0">
+        <section id="my-hobbies" class="ts-block ts-xs-text-center pb-0">
             <div class="container">
-                <div class="ts-title text-center"><h2>14k' Services</h2></div>
+                <div class="ts-title text-center"><h2>14k' Hobbies</h2></div>
                 <div class="row">
 
                     <div class="col-sm-6 col-md-4 col-xl-4">
