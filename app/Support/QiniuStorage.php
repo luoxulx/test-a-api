@@ -25,7 +25,7 @@ class QiniuStorage
     {
         $this->accessKey = config('app.14k.qn_access_key');
         $this->secretKey = config('app.14k.qn_secret_key');
-        $this->bucket = 'net-us';
+        $this->bucket = config('app.14k.qn_bucket');
         $this->expires = 3600;
 
         $this->auth = new Auth($this->accessKey, $this->secretKey);
