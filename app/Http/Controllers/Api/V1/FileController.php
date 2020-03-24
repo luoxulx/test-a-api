@@ -14,9 +14,6 @@ use App\Transformers\FileTransformer;
 
 class FileController extends BaseController
 {
-
-    // 1 图片
-    // 2 文件
     protected $file;
     protected $qiniu;
 
